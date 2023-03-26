@@ -43,6 +43,7 @@ Fails on go 1.20.2 with the following error:
 FAIL
 FAIL    github.com/sixcolors/textmime   0.016s
 FAIL
+```
 
 ## Investigation
 The following observations were made:
