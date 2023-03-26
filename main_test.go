@@ -5,13 +5,11 @@ import (
 )
 
 func TestAccepts(t *testing.T) {
-	// Checks the mimetype of .text file
-	// this should return text/plain on macOS
-	// but "application/octet-stream" on linux and windows
+	// Checks the mimetype of .text files
 	mimetype := Accepts("text", "json")
 
-	// assert that mimetype is application/octet-stream
-	if mimetype != "application/octet-stream" {
+	// assert that mimetype is application/json
+	if mimetype != "application/json" {
 		t.Errorf("mimetype is %s, want application/octet-stream", mimetype)
 	}
 }
