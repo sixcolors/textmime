@@ -43,3 +43,9 @@ Fails on go 1.20.2 with the following error:
 FAIL
 FAIL    github.com/sixcolors/textmime   0.016s
 FAIL
+
+## Investigation
+The following observations were made:
+- On a local macOS machine, the file extension "text" is associated with the mime type "text/plain".
+- The application that registers "text" is /Applications/TextEdit.app which is a default macOS application.
+- This application is not installed on the CI machines.
