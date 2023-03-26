@@ -34,3 +34,12 @@ FAIL
 FAIL    github.com/sixcolors/textmime   0.329s
 FAIL
 ```
+#### macOS Majave 10.14.6 (18G9323)
+Fails on go 1.20.2 with the following error:
+```
+=== RUN   TestAccepts
+    main_test.go:13: mimetype is text/plain; charset=utf-8, want application/json
+--- FAIL: TestAccepts (0.01s)
+FAIL
+FAIL    github.com/sixcolors/textmime   0.016s
+FAIL
