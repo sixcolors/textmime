@@ -1,5 +1,14 @@
 ## About
-A test of mime.TypeByExtension() on a variety of platforms and go versions.
+This is a sample app to investigate the behavior of mime.TypeByExtension() on a variety of platforms and go versions.
+
+It is being used to investigate the following issue:
+https://github.com/gofiber/fiber/issues/2383
+
+In GoFiber/Fiber, the following code is used:
+```go
+c.Request().Header.Set(HeaderAccept, "text/*, application/json")
+c.Accepts("json", "text") // should return "json", but on local macOS returns "text"
+```
 
 ## Results
 
